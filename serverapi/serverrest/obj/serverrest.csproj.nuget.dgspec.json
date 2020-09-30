@@ -1,0 +1,164 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/Work/corsoscm/serverapi/serverrest/serverrest.csproj": {}
+  },
+  "projects": {
+    "/home/Work/corsoscm/serverapi/server.data/server.data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/Work/corsoscm/serverapi/server.data/server.data.csproj",
+        "projectName": "server.data",
+        "projectPath": "/home/Work/corsoscm/serverapi/server.data/server.data.csproj",
+        "packagesPath": "/home/paolo/.nuget/packages/",
+        "outputPath": "/home/Work/corsoscm/serverapi/server.data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/paolo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/3.1.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/Work/corsoscm/serverapi/serverrest/serverrest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/Work/corsoscm/serverapi/serverrest/serverrest.csproj",
+        "projectName": "serverrest",
+        "projectPath": "/home/Work/corsoscm/serverapi/serverrest/serverrest.csproj",
+        "packagesPath": "/home/paolo/.nuget/packages/",
+        "outputPath": "/home/Work/corsoscm/serverapi/serverrest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/paolo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/Work/corsoscm/serverapi/server.data/server.data.csproj": {
+                "projectPath": "/home/Work/corsoscm/serverapi/server.data/server.data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/3.1.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

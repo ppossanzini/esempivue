@@ -1,0 +1,8 @@
+/home/Work/corsoscm/serverapi/server.data/bin/Debug/netstandard2.0/server.data.deps.json
+/home/Work/corsoscm/serverapi/server.data/bin/Debug/netstandard2.0/server.data.dll
+/home/Work/corsoscm/serverapi/server.data/bin/Debug/netstandard2.0/server.data.pdb
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netstandard2.0/server.data.csprojAssemblyReference.cache
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netstandard2.0/server.data.AssemblyInfoInputs.cache
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netstandard2.0/server.data.AssemblyInfo.cs
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netstandard2.0/server.data.dll
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netstandard2.0/server.data.pdb

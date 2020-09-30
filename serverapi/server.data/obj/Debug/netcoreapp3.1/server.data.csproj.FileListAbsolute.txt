@@ -1,0 +1,8 @@
+/home/Work/corsoscm/serverapi/server.data/bin/Debug/netcoreapp3.1/server.data.deps.json
+/home/Work/corsoscm/serverapi/server.data/bin/Debug/netcoreapp3.1/server.data.dll
+/home/Work/corsoscm/serverapi/server.data/bin/Debug/netcoreapp3.1/server.data.pdb
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netcoreapp3.1/server.data.csprojAssemblyReference.cache
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netcoreapp3.1/server.data.AssemblyInfoInputs.cache
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netcoreapp3.1/server.data.AssemblyInfo.cs
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netcoreapp3.1/server.data.dll
+/home/Work/corsoscm/serverapi/server.data/obj/Debug/netcoreapp3.1/server.data.pdb
