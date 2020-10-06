@@ -13,7 +13,22 @@ export default class List extends Vue {
     return (this.$store.state as IStoreState).forecast;
   }
 
+  get filteredforecasts(): data.Forecast[] {
+    return this.forecasts.filter(f => !this.searchText ||
+      this.searchFunction.bind(f)());
+  }
+
   searchText: string = "";
+
+  get searchFunction(): Function {
+    try {
+      return eval(`function t(){ return this.precipitation ${this.searchText};}t`) as Function;
+    }
+    catch {
+      return () => false;
+    }
+
+  }
 
   inputdata: data.Forecast = {
     temperatureC: 0,
@@ -22,6 +37,8 @@ export default class List extends Vue {
 
   async mounted() {
     await WeatherService.GetForecasts(this.$store);
+
+      
   }
 
   sendData() {
