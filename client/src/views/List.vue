@@ -9,10 +9,13 @@
 
       <button class="send" @click="sendData()">invia</button>
     </header>
+
+    <input-card v-model="searchText" v-on:search="console.log($event)"></input-card>
+
     <forecast v-for="(f, idx) in forecasts" :key="idx" :model="f"></forecast>
   </div>
 </template>
-<script lang="ts" src="./List.ts"></script>
+<script lang="ts" src="./List.ts"/>
 <style lang="less">
 @import url("./List.less");
 </style>

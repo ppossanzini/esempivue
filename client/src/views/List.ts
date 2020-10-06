@@ -1,12 +1,15 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import forecast from "@/components/forecast.vue";
+import forecast from "@/components/forecast/forecast.vue";
 import { WeatherService } from '@/services/weatherService';
 
-@Component({ components: { forecast } })
+
+@Component({ components: { forecast} })
 export default class List extends Vue {
 
   forecasts: data.Forecast[] = [];
+
+  searchText: string = "";
 
   inputdata: data.Forecast = {
     temperatureC: 0,
@@ -15,6 +18,7 @@ export default class List extends Vue {
 
   async mounted() {
     this.forecasts = await WeatherService.GetForecasts();
+    
   }
 
   async sendData() {

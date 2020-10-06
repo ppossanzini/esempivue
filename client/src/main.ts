@@ -5,6 +5,13 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import * as components from "@/components/index";
+
+for (const compname in components) {
+  Vue.component(compname, (components as any)[compname]);
+}
+
+
 new Vue({
   router,
   store,
