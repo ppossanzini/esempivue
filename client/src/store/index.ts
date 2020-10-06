@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, { Store } from 'vuex'
 
 Vue.use(Vuex)
 
@@ -9,32 +9,51 @@ interface IAlarm {
   resolved: boolean
 }
 
-export default new Vuex.Store({
+export interface IStoreState {
+  alarms: IAlarm[],
+  forecast: data.Forecast[]
+}
+
+interface IStoreActions {
+  setForecasts(context: any, model: data.Forecast[]): void;
+}
+
+const store = {
   state: {
-    alarms: []
-  },
+    alarms: [],
+    forecast: []
+  } as IStoreState,
   getters: {
-    getUserAlarms(state) {
+    getUserAlarms(state: IStoreState) {
       return state.alarms
     }
   },
   mutations: {
-    refreshAllarmi(state) {
-      for (const a of state.alarms as IAlarm[]) {
+    setForecasts(state: IStoreState, model: data.Forecast[]) {
+      state.forecast.push(...model);
+    },
+    refreshAllarmi(state: IStoreState) {
+      for (const a of state.alarms) {
         a.resolved = true;
       }
     },
-    addAlarm(state, model: { alarm: IAlarm, test: boolean }) {
-      (state.alarms as IAlarm[]).push(model.alarm);
+    addAlarm(state: IStoreState, model: { alarm: IAlarm, test: boolean }) {
+      state.alarms.push(model.alarm);
     }
   },
   actions: {
-    refreshAllarmi(context) {
+    setForecasts(context: any, model: data.Forecast[]) {
+      context.commit('setForecasts', model);
+    },
+    refreshAllarmi(context: any) {
       context.commit('refreshAllarmi');
     },
-    addAlarm(context, model: { alarm: IAlarm, test: boolean }) {
+    addAlarm(context: any, model: { alarm: IAlarm, test: boolean }) {
       context.commit('addAlarm', model);
     }
   },
+}
 
-})
+export const storeActions = store.actions as IStoreActions;
+
+export default new Vuex.Store(store)
