@@ -66,3 +66,5 @@
 /home/Work/corsoscm/serverapi/serverrest/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/Work/corsoscm/serverapi/serverrest/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/Work/corsoscm/serverapi/serverrest/obj/Debug/netcoreapp3.1/serverrest.MvcApplicationPartsAssemblyInfo.cs
+/home/Work/corsoscm/serverapi/serverrest/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/home/Work/corsoscm/serverapi/serverrest/bin/Debug/netcoreapp3.1/System.Net.WebSockets.WebSocketProtocol.dll

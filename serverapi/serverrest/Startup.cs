@@ -37,7 +37,13 @@ namespace serverrest
           p.AllowAnyHeader();
           p.AllowAnyMethod();
           p.AllowAnyOrigin();
+          // p.AllowCredentials();
         });
+      });
+
+      services.AddSignalR(options =>
+      {
+        options.EnableDetailedErrors = true;
       });
 
       services.AddSwaggerGen(c =>
@@ -57,7 +63,12 @@ namespace serverrest
 
       // app.UseHttpsRedirection();
 
-      app.UseCors();
+      app.UseCors(b => {
+        b.AllowAnyHeader();
+        b.AllowAnyMethod();
+        b.AllowCredentials();
+        b.WithOrigins("http://localhost:8080");
+      });
 
       app.UseSwagger();
       app.UseSwaggerUI(c =>
@@ -67,10 +78,13 @@ namespace serverrest
       app.UseRouting();
 
       app.UseAuthorization();
+      
+      app.UseWebSockets();
 
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllers();
+        endpoints.MapHub<MyHub>("/hub");
       });
     }
   }
